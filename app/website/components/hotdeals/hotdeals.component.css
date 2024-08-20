@@ -1,0 +1,10 @@
+.owl-carousel {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; 
+}
+.item{
+    width: 30%;
+
+}

@@ -1,0 +1,49 @@
+    <div id="hero">
+        <div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm">
+            <div class="item active" style="background-image: url(assets/images/sliders/01.jpg);">
+                <div class="container-fluid">
+                    <div class="caption bg-color vertical-center text-left">
+                        <div class="slider-header fadeInDown-1">Top Brands</div>
+                        <div class="big-text fadeInDown-1"> New Collections </div>
+                        <div class="excerpt fadeInDown-2 hidden-xs"> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span> </div>
+                        <div class="button-holder fadeInDown-3"> <a href="index6c11.html?page=single-product" class="btn-lg btn btn-uppercase btn-primary shop-now-button">Shop Now</a> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(assets/images/sliders/02.jpg);">
+                <div class="container-fluid">
+                    <div class="caption bg-color vertical-center text-left">
+                        <div class="slider-header fadeInDown-1">Spring 2018</div>
+                        <div class="big-text fadeInDown-1"> Women Fashion </div>
+                        <div class="excerpt fadeInDown-2 hidden-xs"> <span>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit</span> </div>
+                        <div class="button-holder fadeInDown-3"> <a href="index6c11.html?page=single-product" class="btn-lg btn btn-uppercase btn-primary shop-now-button">Shop Now</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#owl-main").owlCarousel({
+                autoPlay: 3000, // Set AutoPlay to 3 seconds
+                items: 1,
+                navigation: true,
+                pagination: true,
+                singleItem: true,
+                transitionStyle: "fade"
+            });
+
+            // JavaScript to toggle visibility of elements
+            let items = document.querySelectorAll('.item');
+            let currentIndex = 0;
+
+            setInterval(function() {
+                items[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % items.length;
+                items[currentIndex].classList.add('active');
+            }, 5000); // Change every 5 seconds
+        });
+</script>

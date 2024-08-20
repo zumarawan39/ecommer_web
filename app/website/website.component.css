@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+.aside{
+    width: 25%;
+}
+.main_1{
+    width: 75%;
+}

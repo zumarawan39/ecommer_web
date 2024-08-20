@@ -1,0 +1,11 @@
+.create-new-account{
+    width: 600px;
+    margin: 20px;
+}
+.main_login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}

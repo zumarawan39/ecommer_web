@@ -1,0 +1,68 @@
+<div class="main_login">
+    <div class="col-md-6 col-xl-12 col-sm-6 create-new-account">
+        <h4 class="checkout-subtitle">Create a new account</h4>
+        <p class="text title-tag-line">Create your new account.</p>
+        <form [formGroup]="signupForm" (ngSubmit)="signup()" class="register-form outer-top-xs" role="form">
+          <!-- Email  -->
+          <div class="form-group">
+            <label class="info-title" for="exampleInputEmail2">Email Address <span>*</span></label>
+            <input type="email" class="form-control unicase-form-control text-input" id="exampleInputEmail2"
+              formControlName="email" placeholder="email">
+            <div *ngIf="signupForm.controls['email'].touched && signupForm.controls['email'].invalid">
+              <p class="validationmessage" *ngIf="signupForm.controls['email'].errors?.['required']">Email is required.</p>
+              <p class="validationmessage" *ngIf="signupForm.controls['email'].errors?.['email']">Email is not valid.</p>
+            </div>
+          </div>
+      
+          <!-- Name  -->
+          <div class="form-group">
+            <label class="info-title" for="exampleInputEmail1">Name <span>*</span></label>
+            <input type="text" class="form-control unicase-form-control text-input" id="exampleInputEmail1"
+              formControlName="name" placeholder="firstname">
+            <div *ngIf="signupForm.controls['name'].touched && signupForm.controls['name'].invalid">
+              <p class="validationmessage" *ngIf="signupForm.controls['name'].errors?.['required']">Name is required.</p>
+              <p class="validationmessage" *ngIf="signupForm.controls['name'].errors?.['pattern']">Number not allowed.</p>
+            </div>
+          </div>
+      
+          <!-- Phone number  -->
+          <div class="form-group">
+            <label class="info-title" for="exampleInputEmail1">Phone Number <span>*</span></label>
+            <input type="text" class="form-control unicase-form-control text-input" id="exampleInputEmail1"
+              placeholder="+92*****" formControlName="phonenumber">
+            <div *ngIf="signupForm.controls['phonenumber'].touched && signupForm.controls['phonenumber'].invalid">
+              <p class="validationmessage" *ngIf="signupForm.controls['phonenumber'].errors?.['required']">Phone Number is required.</p>
+              <p class="validationmessage" *ngIf="signupForm.controls['phonenumber'].errors?.['pattern']">Number should contain 13 digits.</p>
+            </div>
+          </div>
+      
+          <!-- Password  -->
+          <div class="form-group">
+            <label class="info-title" for="exampleInputEmail1">Password <span>*</span></label>
+            <input type="password" class="form-control unicase-form-control text-input" id="exampleInputEmail1"
+              formControlName="password" placeholder="password">
+            <div *ngIf="signupForm.controls['password'].touched && signupForm.controls['password'].invalid">
+              <p class="validationmessage" *ngIf="signupForm.controls['password'].errors?.['required']">Password is required.</p>
+              <p class="validationmessage" *ngIf="signupForm.controls['password'].errors?.['pattern']">
+                Password must contain at least one digit, one capital letter, and be at least 8 characters long.
+              </p>
+            </div>
+          </div>
+      
+          <!-- Confirm password  -->
+          <div class="form-group">
+            <label class="info-title" for="exampleInputEmail1">Confirm Password <span>*</span></label>
+            <input type="password" class="form-control unicase-form-control text-input" id="exampleInputEmail1"
+              formControlName="confirmpassword" placeholder="Confirm password" (focus)="confirmPasswordFocused = true;">
+            <div *ngIf="confirmPasswordFocused">
+              <p class="validationmessage" *ngIf="signupForm.controls['confirmpassword'].errors?.['required']">Confirm Password is required.</p>
+              <p class="validationmessage" *ngIf="signupForm.controls['confirmpassword'].value !== signupForm.controls['password'].value">Passwords do not match.</p>
+              <p class="validationmessage" *ngIf="signupForm.controls['confirmpassword'].value === signupForm.controls['password'].value">Passwords match.</p>
+            </div>
+          </div>
+      
+          <button type="submit" class="btn-upper btn btn-primary checkout-page-button">Sign Up</button>
+        </form>
+      </div>
+</div>
+  

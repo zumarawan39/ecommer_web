@@ -1,0 +1,42 @@
+.owl-carousel {
+    display: block;
+}
+
+/* Animation CSS */
+.item {
+    display: none; /* Hide all items by default */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.item.active {
+    display: block; /* Show only the active item */
+    opacity: 1;
+}
+
+/* Animation for text elements */
+.fadeInDown-1, .fadeInDown-2, .fadeInDown-3 {
+    opacity: 0; /* Start hidden */
+    animation: fadeInDown 1s forwards; /* Add forwards to maintain the final state */
+}
+
+.fadeInDown-1 {
+    animation-delay: 1s;
+}
+.fadeInDown-2 {
+    animation-delay: 2s;
+}
+.fadeInDown-3 {
+    animation-delay: 3s;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}

@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.side-menu {
+    width: 250px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    display: contents;
+}
+
+.head {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.megamenu-horizontal .nav {
+    list-style: none;
+    padding: 0;
+    display: block;
+    font-size: 15px;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item > a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.menu-item > a:hover,
+.menu-item:hover > a {
+    background: #f8f8f8;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 250px;
+    top: 0;
+    width: 700px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    z-index: 1000;
+}
+
+.menu-item:hover .dropdown-menu {
+    display: block;
+}
+
+.yamm-content {
+    display: flex;
+}
+
+.col {
+    flex: 1;
+    padding: 10px;
+}
+
+.links.list-unstyled {
+    list-style: none;
+    padding: 0;
+}
+
+.links.list-unstyled li {
+    padding: 5px 0;
+}
+
+.links.list-unstyled li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.links.list-unstyled li a:hover {
+    text-decoration: underline;
+}
